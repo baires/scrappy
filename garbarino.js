@@ -10,6 +10,10 @@ const x = Xray({
     trim(value) {
       return value.replace(/\n/g, '').trim();
     },
+    noZeros(value) {
+      const data = value.replace('$', '');
+      return parseFloat(data);
+    },
   },
 });
 
@@ -17,7 +21,7 @@ x('https://www.garbarino.com/productos/notebooks/4363', '.gb-list-grid li .gb-li
   title: '.gb-list-cluster-title | trim',
   brandName: x('.gb-list-cluster > a@href', '.gb-breadcrumb-brand'),
   link: '.gb-list-cluster a@href',
-  price: x('.gb-list-cluster > a@href', '#final-price | trim'),
+  price: x('.gb-list-cluster > a@href', '#final-price | trim | noZeros'),
   createdAt: '#final-price| date',
 }])
   .limit(3)

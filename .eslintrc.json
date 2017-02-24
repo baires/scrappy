@@ -52,6 +52,7 @@
 
         "import/no-named-as-default": "off",
         "import/prefer-default-export": "off",
+        "no-await-in-loop": "off",
 
         "no-warning-comments": "error"
     },

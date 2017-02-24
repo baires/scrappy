@@ -7,6 +7,10 @@ const x = Xray({
     date() {
       return today;
     },
+    noZeros(value) {
+      const data = value.replace('$', '');
+      return parseFloat(data);
+    },
   },
 });
 
@@ -14,7 +18,7 @@ x('http://www.fravega.com/informatica/notebooks', '.resultItemsWrapper .informat
   title: 'h3 a',
   brandName: x('.image > a@href', '.brandName'),
   link: '.image a@href',
-  price: x('.image > a@href', '.skuBestPrice'),
+  price: x('.image > a@href', '.skuBestPrice | noZeros'),
   createdAt: '.skuBestPrice | date',
 }])
   .limit(3)
