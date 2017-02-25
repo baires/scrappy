@@ -10,7 +10,7 @@
     "scrap": "npm run garbarino && npm run fravega",
     "export-csv-garbarino": "./node_modules/.bin/babel-node csvparser-garbarino.js",
     "export-csv-fravega": "./node_modules/.bin/babel-node csvparser-fravega.js",
-    "export-csv": "npm run export-csv-fravega && npm export-csv-garbarino",
+    "export-csv": "npm run export-csv-fravega && npm run export-csv-garbarino",
     "bundle-csv-fravega": "csv-concat ./data/csv/fravega ./data/csv/fravega/out.csv",
     "bundle-csv-garbarino": "csv-concat ./data/csv/garbarino ./data/csv/garbarino/out.csv"
   },
