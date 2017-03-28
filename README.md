@@ -1,4 +1,6 @@
 # scrappy
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/baires/scrappy.svg)](https://greenkeeper.io/)
 Scrap notebooks price from several sources
 
 ## About
